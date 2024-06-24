@@ -1,4 +1,4 @@
-package services.product.src.main.java.com.zikan.ecommerce;
+package com.zikan.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
