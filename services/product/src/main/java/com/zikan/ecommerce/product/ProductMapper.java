@@ -35,6 +35,12 @@ public class ProductMapper {
     }
 
     public ProductPurchaseResponse toProductPurchaseResponse(Product product, double quantity) {
-        return null;
+        return new ProductPurchaseResponse(
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice(),
+                quantity
+        );
     }
 }
