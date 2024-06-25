@@ -6,14 +6,17 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
-    database: postgresql
-    datasource-platform: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   flyway:
+    validateMigrationNaming: true
     baseline-on-migrate: true
     enabled: true
     baseline-description: "init"
     baseline-version: 0
+    repair-on-migrate: true
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
 
