@@ -1,7 +1,6 @@
 package com.zikan.ecommerce.orderline;
 
-import com.zikan.ecommerce.Order;
-import com.zikan.ecommerce.OrderLine;
+import com.zikan.ecommerce.order.Order;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,5 +19,9 @@ public class OrderLineMapper {
                 )
                 .productId(orderLineRequest.productId())
                 .build();
+    }
+
+    public OrderLineResponse toOrderLineResponse(OrderLine orderLine) {
+        return new OrderLineResponse(orderLine.getId(), orderLine.getQuantity());
     }
 }

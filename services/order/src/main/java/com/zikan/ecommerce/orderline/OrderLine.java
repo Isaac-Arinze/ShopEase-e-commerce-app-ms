@@ -1,5 +1,6 @@
-package com.zikan.ecommerce;
+package com.zikan.ecommerce.orderline;
 
+import com.zikan.ecommerce.order.Order;
 import jakarta.persistence.*;
 import lombok.*;
 

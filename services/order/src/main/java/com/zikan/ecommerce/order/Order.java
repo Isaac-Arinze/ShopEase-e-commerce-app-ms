@@ -1,5 +1,6 @@
-package com.zikan.ecommerce;
+package com.zikan.ecommerce.order;
 
+import com.zikan.ecommerce.orderline.OrderLine;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

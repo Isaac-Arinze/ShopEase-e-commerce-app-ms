@@ -1,4 +1,4 @@
-package com.zikan.ecommerce;
+package com.zikan.ecommerce.order;
 
 public enum PaymentMethod {
 
