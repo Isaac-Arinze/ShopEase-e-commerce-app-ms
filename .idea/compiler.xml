@@ -9,14 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="product" />
+        <module name="payment" />
         <module name="discovery" />
         <module name="customer" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-server" target="17" />
       <module name="customer" target="17" />
       <module name="discovery" target="17" />
+      <module name="order" target="17" />
+      <module name="payment" target="17" />
       <module name="product" target="17" />
       <module name="product-service" target="17" />
     </bytecodeTargetLevel>
@@ -26,6 +30,8 @@
       <module name="config-server" options="-parameters" />
       <module name="customer" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="payment" options="-parameters" />
       <module name="product" options="-parameters" />
       <module name="product-service" options="-parameters" />
     </option>
