@@ -1,4 +1,4 @@
-package com.zikan.ecommerce.notification;
+package com.zikan.ecommerce;
 
 import com.zikan.ecommerce.payment.PaymentMethod;
 
