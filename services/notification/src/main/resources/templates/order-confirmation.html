@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="(link unavailable)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .confirmation-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-details {
+            margin-top: 20px;
+        }
+
+        .product-info {
+            margin-bottom: 10px;
+        }
+
+        .product-info span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .total-amount {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .back-to-home {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-to-home:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="confirmation-container">
+    <h1 th:text="|Order Confirmation for ${customerName}|">Order Confirmation</h1>
+    <p>Dear <span th:text="${customerName}">customerName</span>,</p>
+    <p>Your order has been successfully placed.</p>
+    <p>Your order reference number is <span th:text="${orderReference}">orderReference</span>.</p>
+    <div class="order-details">
+        <p>Order Details:</p>
+        <table border="1">
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.productName}">Product Name</td>
+                <td th:text="${product.productQuantity}">Product Quantity</td>
+                <td th:text="${product.productPrice}">Product Price</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total Amount:</td>
+                <td th:text="${totalAmount}">Total Amount</td>
+            </tr>
+        </table>
+    </div>
+    <p>Thank you for your order.</p>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+</div>
+<footer>
+    &copy; 2024 skytech All rights reserved
+</footer>
+</body>
+</html>

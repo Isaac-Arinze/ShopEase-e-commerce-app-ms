@@ -1,7 +1,7 @@
 package com.zikan.ecommerce.payment;
 
-import com.zikan.ecommerce.notification.NotificationProducer;
-import com.zikan.ecommerce.notification.PaymentNotificationRequest;
+import com.zikan.ecommerce.NotificationProducer;
+import com.zikan.ecommerce.PaymentNotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
