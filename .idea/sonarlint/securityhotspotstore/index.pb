@@ -9,8 +9,6 @@ y
 Iservices/customer/src/main/java/com/zikan/ecommerce/customer/Address.java,8/1/81f1f082977a8e2b08c2c37d14c860a27027bd65
 Å
 Qservices/customer/src/main/java/com/zikan/ecommerce/customer/CustomerRequest.java,2/1/21e802c196a3399dba9fcccbc24865ba01474145
-Ñ
-Tservices/customer/src/main/java/com/zikan/ecommerce/customer/CustomerRepository.java,2/a/2aa1c4f0a76bb19c282dfe2dfd219dcc4be08999
 ï
 eservices/customer/src/main/java/com/zikan/ecommerce/customer/exception/CustomerNotFoundException.java,7/2/729d6661633a928f60a91f962e1241345bbb51b6
 Ç
@@ -57,8 +55,6 @@ H
 Vservices/product/src/main/java/com/zikan/ecommerce/handler/GlobalExceptionHandler.java,2/e/2e9d2e7817097552998cded7a97672bf725d4807
 t
 Dservices/product/src/main/java/com/zikan/ecommerce/FlywayRepair.java,1/e/1e60ca8ac9fcaf665838a5117a5fc920b878088d
-v
-Fservices/order/src/main/java/com/zikan/ecommerce/OrderApplication.java,6/d/6d8da43e8d63a8994f1d554091d04dc294c0205f
 N
 services/config-server/pom.xml,f/2/f29a944c734cc0b47102730d95018f7c717d5e3f
 F
@@ -83,8 +79,6 @@ w
 Gservices/order/src/main/java/com/zikan/ecommerce/order/OrderMapper.java,1/8/1823a3b88a7f1f68e430eb6c56226b38050cbd8c
 {
 Kservices/order/src/main/java/com/zikan/ecommerce/order/OrderController.java,a/8/a868b1c2930a618d67261ae7417e0201b0bfb8d3
-x
-Hservices/order/src/main/java/com/zikan/ecommerce/order/OrderService.java,d/1/d183cccecc72746d997513d0f360120d44e9dfb6
 Ñ
 Tservices/order/src/main/java/com/zikan/ecommerce/handler/GlobalExceptionHandler.java,6/8/682ddd7465aefa5f8f17ad3157e6a853e61562b0
 H

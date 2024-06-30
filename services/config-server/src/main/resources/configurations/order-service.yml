@@ -1,4 +1,8 @@
 spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: order-service
   datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: postgres
@@ -6,24 +10,24 @@ spring:
     driver-class-name: org.postgresql.Driver
     jpa:
       hibernate:
-        ddl-auto: create
+        ddl-auto: update
       database: postgresql
       properties:
         hibernate:
           dialect: org.hibernate.dialect.PostgreSQLDialect
-    kafka:
-      producer:
-        boostrap-servers: localhost:9092
-        key-serializer: org.apache.kafka.common.serialization.StringSerializer
-        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-        properties:
-          spring.json.type.mapping: orderConfirmation:com.zikan.ecommerce.kafka.OrderConfirmation
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: orderConfirmation:com.zikan.ecommerce.kafka.OrderConfirmation
 
-  server:
-    port: 8070
-  application:
-    config:
-      customer-url: http://localhost:8222/api/v1/customers
-      payment-url: http://localhost:8222/api/v1/payments
-      product-url: http://localhost:8222/api/v1/products
+server:
+  port: 8070
 
+application:
+  config:
+    customer-url: http://localhost:8222/api/v1/customers
+    payment-url: http://localhost:8222/api/v1/payments
+    product-url: http://localhost:8222/api/v1/products
