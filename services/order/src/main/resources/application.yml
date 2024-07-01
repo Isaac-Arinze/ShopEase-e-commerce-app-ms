@@ -4,9 +4,9 @@ spring:
   application:
     name: order-service
 
-    logging:
-      level:
-        org.springframework: DEBUG
+#    logging:
+#      level:
+#        org.springframework: DEBUG
 
 
 #    kafka:

@@ -1,8 +1,6 @@
 
 â
 Yservices/config-server/src/main/java/com/zikan/config_server/ConfigServerApplication.java,0/7/0713d1bca9a00f3614b88ec7a5173f7560b1c34d
-~
-Nservices/discovery/src/main/java/com/zikan/discovery/DiscoveryApplication.java,6/d/6d102b4cad596652cc6109578890a037dfbfe411
 |
 Lservices/customer/src/main/java/com/zikan/ecommerce/CustomerApplication.java,9/2/926381a87cd13a30a2d4f0402aaabc36701c9de4
 y
@@ -59,8 +57,6 @@ N
 services/config-server/pom.xml,f/2/f29a944c734cc0b47102730d95018f7c717d5e3f
 F
 services/order/pom.xml,c/8/c8b20644f4771c599b2df35d865086b365098b06
-Ç
-Rservices/order/src/main/java/com/zikan/ecommerce/config/KafkaOrderTopicConfig.java,0/7/07391cbefc7b052cd837c8e3dc4d9d510a898a6c
 y
 Iservices/order/src/main/java/com/zikan/ecommerce/order/OrderResponse.java,2/c/2c53c62bb51a15bf83e8bf62c3e3f31c2fa2cfe9
 Å
@@ -103,3 +99,7 @@ Mservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentMapper.java,
 Vservices/payment/src/main/java/com/zikan/ecommerce/config/KafkaPaymentTopicConfig.java,7/a/7ab25c5521a9b247dfef6b7dd2ac61af7a496d2c
 ~
 Nservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentService.java,e/e/eee82146c1abdca9ea63ff7bca025f5a8470795a
+}
+Mservices/order/src/main/java/com/zikan/ecommerce/customer/PropertyLogger.java,3/0/30a9c46625979838bc1e3101d8b35d1d0f01aa41
+Ñ
+Tservices/customer/src/main/java/com/zikan/ecommerce/customer/CustomerRepository.java,2/a/2aa1c4f0a76bb19c282dfe2dfd219dcc4be08999
