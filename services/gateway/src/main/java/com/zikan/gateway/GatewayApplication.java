@@ -1,4 +1,4 @@
-package services.gateway.src.main.java.com.zikan.gateway;
+package com.zikan.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
