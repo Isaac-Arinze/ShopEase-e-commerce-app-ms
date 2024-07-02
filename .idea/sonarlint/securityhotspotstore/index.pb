@@ -1,6 +1,4 @@
 
-â
-Yservices/config-server/src/main/java/com/zikan/config_server/ConfigServerApplication.java,0/7/0713d1bca9a00f3614b88ec7a5173f7560b1c34d
 |
 Lservices/customer/src/main/java/com/zikan/ecommerce/CustomerApplication.java,9/2/926381a87cd13a30a2d4f0402aaabc36701c9de4
 y
@@ -91,8 +89,6 @@ Jservices/payment/src/main/java/com/zikan/ecommerce/PaymentApplication.java,5/7
 Qservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentRepository.java,3/3/33eb4ae0dfd1f3fbc9a415e95033c38539fd408d
 ~
 Nservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentRequest.java,a/f/afe7709a22d88488ad5b9830dd38b5aadb1fe01c
-Å
-Qservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentController.java,3/0/30f6b9db42b93cb842cafd6acb8bf3f366bafdc3
 }
 Mservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentMapper.java,2/e/2e3b8ce6b1a3104137115dbd3463806cbca4e653
 Ü
