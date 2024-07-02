@@ -21,12 +21,8 @@ Gservices/product/src/main/java/com/zikan/ecommerce/product/Product.java,1/c/1c
 Oservices/product/src/main/java/com/zikan/ecommerce/product/ProductResponse.java,3/a/3a56833613d121dea735030601b6f16e097dde8d
 ~
 Nservices/product/src/main/java/com/zikan/ecommerce/product/ProductRequest.java,b/b/bbae5a6b7a71ca0578f6980c9a5232f92e0821d3
-Ü
-Vservices/product/src/main/java/com/zikan/ecommerce/product/ProductPurchaseRequest.java,1/a/1a1a522e03649bb5180a0930ec52abb31837f1c1
 Å
 Qservices/product/src/main/java/com/zikan/ecommerce/product/ProductRepository.java,9/f/9f0729cd3b25a8a72187f863409c9dd080aaeb15
-á
-Wservices/product/src/main/java/com/zikan/ecommerce/product/ProductPurchaseResponse.java,9/4/94354f14d3d680065bc6257f5c37f78a872fc392
 }
 Mservices/product/src/main/java/com/zikan/ecommerce/product/ProductMapper.java,1/2/12c18bdf698a98a4c3ce3e1c1ad5021171692556
 ~
@@ -55,8 +51,6 @@ Sservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLineRepository.
 Sservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLineController.java,8/c/8cab46fdce423f9d723e415a23e3b18e228097d3
 Ä
 Pservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLineService.java,3/c/3cb75a73622f21feecac17eea19cfe7d302145e6
-y
-Iservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLine.java,b/e/be3ed6acfc60a59b9d54ae57e4aab560e68b7570
 w
 Gservices/order/src/main/java/com/zikan/ecommerce/order/OrderMapper.java,1/8/1823a3b88a7f1f68e430eb6c56226b38050cbd8c
 
@@ -65,10 +59,6 @@ Oservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLineMapper.java
 Tservices/order/src/main/java/com/zikan/ecommerce/handler/GlobalExceptionHandler.java,6/8/682ddd7465aefa5f8f17ad3157e6a853e61562b0
 H
 services/payment/pom.xml,4/e/4e77c4d81e648f7ca37af08b0ecf1307b6959e27
-q
-Aservices/order/src/main/java/com/zikan/ecommerce/order/Order.java,c/c/ccbb4c91e8b64be0dc0781da7edc5b5d9b26e5c2
-}
-Mservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentMethod.java,a/8/a89e3682a50ae64a469d655eaecc05855c3cdd63
 w
 Gservices/payment/src/main/java/com/zikan/ecommerce/payment/Payment.java,e/4/e4a206cf2ec751c0d14dbd2ed117992f7e81fd9a
 z
