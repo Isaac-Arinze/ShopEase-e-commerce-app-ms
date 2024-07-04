@@ -5,7 +5,7 @@ spring:
       password: zikan
       host: localhost
       port: 27017
-      database: customer
+      database: notification
       authentication-database: admin
   kafka:
     consumer:
