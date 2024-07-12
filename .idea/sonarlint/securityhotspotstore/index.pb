@@ -29,8 +29,6 @@ Nservices/product/src/main/java/com/zikan/ecommerce/product/ProductService.java
 Mservices/product/src/main/java/com/zikan/ecommerce/product/ProductMapper.java,1/2/12c18bdf698a98a4c3ce3e1c1ad5021171692556
 }
 Mservices/product/src/main/java/com/zikan/ecommerce/handler/ErrorResponse.java,f/0/f0721c705acf410172892cfc92859a7c31b42c9a
-H
-services/product/pom.xml,8/4/84c85679fbed56170f91b7779f2667c405614104
 Ü
 Vservices/product/src/main/java/com/zikan/ecommerce/handler/GlobalExceptionHandler.java,2/e/2e9d2e7817097552998cded7a97672bf725d4807
 N
@@ -57,8 +55,6 @@ H
 services/payment/pom.xml,4/e/4e77c4d81e648f7ca37af08b0ecf1307b6959e27
 w
 Gservices/payment/src/main/java/com/zikan/ecommerce/payment/Payment.java,e/4/e4a206cf2ec751c0d14dbd2ed117992f7e81fd9a
-z
-Jservices/payment/src/main/java/com/zikan/ecommerce/PaymentApplication.java,5/7/57d868f9b404231dee55ff758b7a7eea5d9e170b
 Å
 Qservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentRepository.java,3/3/33eb4ae0dfd1f3fbc9a415e95033c38539fd408d
 ~
@@ -69,7 +65,21 @@ Mservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentMapper.java,
 Vservices/payment/src/main/java/com/zikan/ecommerce/config/KafkaPaymentTopicConfig.java,7/a/7ab25c5521a9b247dfef6b7dd2ac61af7a496d2c
 ~
 Nservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentService.java,e/e/eee82146c1abdca9ea63ff7bca025f5a8470795a
-}
-Mservices/order/src/main/java/com/zikan/ecommerce/customer/PropertyLogger.java,3/0/30a9c46625979838bc1e3101d8b35d1d0f01aa41
 Ñ
 Tservices/customer/src/main/java/com/zikan/ecommerce/customer/CustomerRepository.java,2/a/2aa1c4f0a76bb19c282dfe2dfd219dcc4be08999
+á
+Wservices/product/src/main/java/com/zikan/ecommerce/product/ProductPurchaseResponse.java,9/4/94354f14d3d680065bc6257f5c37f78a872fc392
+t
+Dservices/product/src/main/java/com/zikan/ecommerce/FlywayRepair.java,1/e/1e60ca8ac9fcaf665838a5117a5fc920b878088d
+q
+Aservices/order/src/main/java/com/zikan/ecommerce/order/Order.java,c/c/ccbb4c91e8b64be0dc0781da7edc5b5d9b26e5c2
+y
+Iservices/order/src/main/java/com/zikan/ecommerce/orderline/OrderLine.java,b/e/be3ed6acfc60a59b9d54ae57e4aab560e68b7570
+z
+Jservices/customer/src/main/java/com/zikan/ecommerce/customer/Customer.java,c/a/ca3da387829ea1c47542f3919d5e9e6339810ddb
+}
+Mservices/payment/src/main/java/com/zikan/ecommerce/payment/PaymentMethod.java,a/8/a89e3682a50ae64a469d655eaecc05855c3cdd63
+Ñ
+Tservices/customer/src/main/java/com/zikan/ecommerce/customer/CustomerController.java,b/8/b8b339c63b4ec51f0715baa8b5596aa356cfcd8d
+O
+services/config-server/mvnw.cmd,a/b/ab280808edea14b0d10ba52ad1b0385854b8b72c
