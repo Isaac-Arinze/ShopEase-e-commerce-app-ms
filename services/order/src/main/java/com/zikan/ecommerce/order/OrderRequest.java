@@ -1,27 +1,27 @@
 package com.zikan.ecommerce.order;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
+import com.zikan.ecommerce.customer.Address;
 import com.zikan.ecommerce.product.PurchaseRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
-
 import java.math.BigDecimal;
 import java.util.List;
 
-public record OrderRequest (
+public record OrderRequest(
         Integer id,
-        String reference, // create an algorithm that generate our ref
+        String reference,
         @Positive(message = "Order amount should be positive")
         BigDecimal amount,
-        @NotNull(message = "payment amount should be precised")
+        @NotNull(message = "Payment method should be specified")
         PaymentMethod paymentMethod,
-        @NotNull(message = "Customer  should be present")
-        @NotEmpty(message = "Customer should be present")
-        @NotBlank(message = "Customer  should be present")
+        @NotBlank(message = "Customer ID should be present")
         String customerId,
-        @NotEmpty(message = "Kindly purchase one product")
-        List<PurchaseRequest> products
-
+        @NotEmpty(message = "At least one product should be purchased")
+        List<PurchaseRequest> products,
+        @JsonUnwrapped
+        Address address
 ) {
 }

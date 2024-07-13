@@ -1,5 +1,6 @@
 package com.zikan.ecommerce.order;
 
+import com.zikan.ecommerce.order.OrderResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +15,18 @@ public class OrderController {
 
     private final OrderService orderService;
 
-    @PostMapping()
-    public ResponseEntity<Integer> createOrder(@RequestBody @Valid OrderRequest orderRequest){
+    @PostMapping
+    public ResponseEntity<Integer> createOrder(@RequestBody @Valid OrderRequest orderRequest) {
         return ResponseEntity.ok(orderService.createOrder(orderRequest));
     }
 
     @GetMapping
-    public ResponseEntity <List<OrderResponse>> findAll(){
-        return ResponseEntity.ok(orderService.findALL());
+    public ResponseEntity<List<OrderResponse>> findAll() {
+        return ResponseEntity.ok(orderService.findAll());
     }
-    @GetMapping("{order-id}")
-    public ResponseEntity<OrderResponse> findById(@PathVariable ("order-id") Integer orderId){
 
+    @GetMapping("{order-id}")
+    public ResponseEntity<OrderResponse> findById(@PathVariable("order-id") Integer orderId) {
         return ResponseEntity.ok(orderService.findById(orderId));
     }
-
 }
