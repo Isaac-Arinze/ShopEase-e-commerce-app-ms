@@ -24,16 +24,18 @@ import static jakarta.persistence.EnumType.STRING;
 @Table (name = "customer_order")
 public class Order {
 
-    @Id@GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order_generator")
+    @SequenceGenerator(name = "order_generator", sequenceName = "customer_order_seq", allocationSize = 50)
     private Integer id;
     private String reference;
     private BigDecimal totalAmount;
 
-    @Enumerated(STRING)
+    @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
     private String customerId;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderLine> orderLines;
 
     @CreatedDate
@@ -42,6 +44,6 @@ public class Order {
 
     @LastModifiedDate
     @Column(insertable = false, nullable = false)
-    private LocalDateTime lastModifiedDate;
+    private LocalDateTime lastModifiedDate; 
 
 }
