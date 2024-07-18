@@ -1,3 +1,5 @@
+package com.zikan.ecommerce.product;
+
 import com.zikan.ecommerce.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
