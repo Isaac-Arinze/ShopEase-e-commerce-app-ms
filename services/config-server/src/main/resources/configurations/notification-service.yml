@@ -9,7 +9,7 @@ spring:
       authentication-database: admin
   kafka:
     consumer:
-      boostrap-servers: localhost:9092
+      bootstrap-servers: localhost:9092
       group-id: paymentGroup,orderGroup
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
@@ -17,6 +17,7 @@ spring:
       properties:
         spring.json.trusted.packages: '*'
         spring.json.type.mapping: orderConfirmation:com.zikan.ecommerce.kafka.order.OrderConfirmation,paymentConfirmation:com.zikan.ecommerce.kafka.payment.PaymentConfirmation
+
 #        spring.json.type.mapping: orderConfirmation:com.zikan.ecommerce.kafka.OrderConfirmation,paymentConfirmation:com.zikan.ecommerce.notification.PaymentNotificationRequest
 
   mail:
