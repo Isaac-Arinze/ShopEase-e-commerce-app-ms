@@ -1,96 +1,96 @@
-services:
-  postgres:
-    container_name: ms_pg_sql
-    image: postgres
-    environment:
-      POSTGRES_USER: zikans
-      POSTGRES_PASSWORD: zikan
-      PGDATA: /var/lib/postgresql/data
-    volumes:
-      - postgres:/var/lib/postgresql/data
-      - ./initdb:/docker-entrypoint-initdb.d  # Mount the init script directory
-    ports:
-      - 5434:5432  # Corrected port mapping
-    networks:
-      - microservices-net
-    restart: unless-stopped
+  services:
+    postgres:
+      container_name: ms_pg_sql
+      image: postgres
+      environment:
+        POSTGRES_USER: zikans
+        POSTGRES_PASSWORD: zikan
+        PGDATA: /var/lib/postgresql/data
+      volumes:
+        - postgres:/var/lib/postgresql/data
+        - ./initdb:/docker-entrypoint-initdb.d  # Mount the init script directory
+      ports:
+        - 5434:5432  # Corrected port mapping
+      networks:
+        - microservices-net
+      restart: unless-stopped
 
-  pgadmin:
-    container_name: ms_pgadmin
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-pgadmin@pgadmin.admin}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin:/var/lib/pgadmin
-    ports:
-      - 6060:80
-    networks:
-      - microservices-net
-    restart: unless-stopped
+    pgadmin:
+      container_name: ms_pgadmin
+      image: dpage/pgadmin4
+      environment:
+        PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin@pgadmin.org}
+        PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-pgadmin@pgadmin.admin}
+        PGADMIN_CONFIG_SERVER_MODE: 'False'
+      volumes:
+        - pgadmin:/var/lib/pgadmin
+      ports:
+        - 6060:80
+      networks:
+        - microservices-net
+      restart: unless-stopped
 
-  mongodb:
-    container_name: ms_mongo_db
-    image: mongo
-    ports:
-      - 27017:27017
-    volumes:
-      - mongo:/data
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=zikan
-      - MONGO_INITDB_ROOT_PASSWORD=zikan
+    mongodb:
+      container_name: ms_mongo_db
+      image: mongo
+      ports:
+        - 27017:27017
+      volumes:
+        - mongo:/data
+      environment:
+        - MONGO_INITDB_ROOT_USERNAME=zikan
+        - MONGO_INITDB_ROOT_PASSWORD=zikan
 
-  mongo-express:
-    container_name: ms_mongo_express
-    restart: unless-stopped
-    image: mongo-express
-    ports:
-      - 8081:8081
-    environment:
-      - ME_CONFIG_MONGODB_ADMINUSERNAME=zikan
-      - ME_CONFIG_MONGODB_ADMINPASSWORD=zikan
-      - ME_CONFIG_MONGODB_SERVER=ms_mongo_db
+    mongo-express:
+      container_name: ms_mongo_express
+      restart: unless-stopped
+      image: mongo-express
+      ports:
+        - 8081:8081
+      environment:
+        - ME_CONFIG_MONGODB_ADMINUSERNAME=zikan
+        - ME_CONFIG_MONGODB_ADMINPASSWORD=zikan
+        - ME_CONFIG_MONGODB_SERVER=ms_mongo_db
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    container_name: zookeeper
-    environment:
-      ZOOKEEPER_SERVER_ID: 1
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-    ports:
-      - 22181:2181
-    networks:
-      - microservices-net
+    zookeeper:
+      image: confluentinc/cp-zookeeper:latest
+      container_name: zookeeper
+      environment:
+        ZOOKEEPER_SERVER_ID: 1
+        ZOOKEEPER_CLIENT_PORT: 2181
+        ZOOKEEPER_TICK_TIME: 2000
+      ports:
+        - 22181:2181
+      networks:
+        - microservices-net
 
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    container_name: ms_kafka
-    ports:
-      - 9092:9092
-    depends_on:
-      - zookeeper
+    kafka:
+      image: confluentinc/cp-kafka:latest
+      container_name: ms_kafka
+      ports:
+        - 9092:9092
+      depends_on:
+        - zookeeper
 
-  mail-dev:
-    container_name: ms_mail_dev
-    image: maildev/maildev
-    ports:
-      - 1080:1080
-      - 1025:1025
-    environment:
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENER_SECURITY__PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9992
+    mail-dev:
+      container_name: ms_mail_dev
+      image: maildev/maildev
+      ports:
+        - 1080:1080
+        - 1025:1025
+      environment:
+        KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+        KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+        KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+        KAFKA_LISTENER_SECURITY__PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9992
 
-networks:
-  microservices-net:
-    driver: bridge
+  networks:
+    microservices-net:
+      driver: bridge
 
-volumes:
-  postgres:
-  pgadmin:
-  mongo:
+  volumes:
+    postgres:
+    pgadmin:
+    mongo:

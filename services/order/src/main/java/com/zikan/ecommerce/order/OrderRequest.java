@@ -21,7 +21,7 @@ public record OrderRequest(
         String customerId,
         @NotEmpty(message = "At least one product should be purchased")
         List<PurchaseRequest> products,
-        @JsonUnwrapped
+//        @JsonUnwrapped
         Address address
 ) {
 }
